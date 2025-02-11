@@ -10,28 +10,11 @@ export class UserService {
     private readonly UserRepository: Repository<UserEntity>,
   ) {}
 
-  create() {
-    return 'This action adds a new user';
-  }
-
-  findAll() {
-    return `This action returns all user`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
-  }
-
-  update(id: number) {
-    return `This action updates a #${id} user`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} user`;
-  }
-
   // 注册
   async register(user: { name: string }) {
+    console.log(user);
+
+    return;
     return await this.UserRepository.save(user);
   }
 }
